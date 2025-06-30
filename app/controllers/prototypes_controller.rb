@@ -3,8 +3,7 @@ class PrototypesController < ApplicationController
 
   def move_to_edit
     unless user_signed_in?
-      redirect_to action: :index
-    end
+      redirect_to root_path
   end
 
   def index
