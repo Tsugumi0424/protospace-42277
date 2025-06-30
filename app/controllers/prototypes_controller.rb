@@ -1,5 +1,5 @@
 class PrototypesController < ApplicationController
-  before_action :authenticate_user!, only: [:show, :index]
+  before_action :authenticate_user!, except: [:show, :index]
 
   def move_to_edit
     unless user_signed_in? && current_user.id == @prototype.user_id
